@@ -1,0 +1,43 @@
+<div class="card">
+    <div class="card-header">
+        Contact List
+    </div>
+    <div class="card-body">
+        <div class="row">
+            <div class="col-md-2">
+                <b>Display Columns:</b>
+            </div>
+            <div class="col-md-10">
+                <form>
+                    <rep-checkbox field="{{field}}" *ngFor='let field of getContactFields()'></rep-checkbox>
+                </form>
+            </div>
+        </div>
+        <br>
+        <div class="table-responsive">
+            <table class="table table-striped">
+                <thead class="thead-dark">
+                    <tr>
+                        <th>Image</th>
+                        <th>Name</th>
+                        <th>Surname</th>
+                        <th>Number</th>
+                        <th>Email</th>
+                        <th>Tier</th>
+                        
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor='let contact of contactList'>
+                        <td>{{contact.imageUrl}}</td>
+                        <td>{{contact.name}}</td>
+                        <td>{{contact.surname}}</td>
+                        <td>{{contact.number}}</td>
+                        <td>{{contact.email}}</td>
+                        <td>{{contact.tier}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
